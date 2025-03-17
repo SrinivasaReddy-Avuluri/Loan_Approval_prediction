@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Status</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #007bff, #6610f2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+        }
+        .container {
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        h1 {
+            color: #ffcc00;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .message {
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .approved {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+        .rejected {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+        #reset {
+            background-color: #f44336;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(244, 67, 54, 0.5);
+        }
+        #reset:hover {
+            background-color: #ff5c5c;
+            box-shadow: 0px 6px 15px rgba(244, 67, 54, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏦 Loan Approval Status</h1>
+        <div class="message ">
+            Your Loan is {{result}}
+        </div>
+        <form action="/" method="post">
+            <button type="submit" id="reset">Back to Home</button>
+        </form>
+    </div>
+</body>
+</html>
